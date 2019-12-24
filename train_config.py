@@ -28,7 +28,7 @@ config.TRAIN.opt= 'Adam'
 
 config.MODEL = edict()
 config.MODEL.model_path = '/content/drive/My Drive/saved_model_v2/'                                    # save directory
-config.MODEL.pretrained_model= '/content/drive/saved_model/epoch_41_train_lost_6.250940_val_loss5.001673/variables/variables'
+config.MODEL.pretrained_model= '/content/drive/My Drive/saved_model/epoch_41_train_lost_6.250940_val_loss5.001673/variables/variables'
 config.MODEL.model_path = 'saved_model/'     # save directory
 # config.MODEL.pretrained_model= None
 config.MODEL.hin = 512                         # input size during training , 512  different with the paper
@@ -54,10 +54,10 @@ config.TEST.parallel_iterations =8
 
 config.DATA = edict()
 config.DATA.root_path = ''
-# config.DATA.train_txt_path = 'train_colab.txt'
-# config.DATA.val_txt_path = 'val_colab.txt'
-config.DATA.train_txt_path='train.txt'
-config.DATA.val_txt_path='val.txt'
+config.DATA.train_txt_path = 'train_colab.txt'
+config.DATA.val_txt_path = 'val_colab.txt'
+# config.DATA.train_txt_path='train.txt'
+# config.DATA.val_txt_path='val.txt'
 config.DATA.NUM_CLASS = 2
 
 config.DATA.cover_small_face = 400.                      ##small faces are covered
