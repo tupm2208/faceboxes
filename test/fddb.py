@@ -15,7 +15,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 ap = argparse.ArgumentParser()
 ap.add_argument( "--model", required=True, default='', help="model to eval:")
 ap.add_argument( "--is_show", required=False, default=False, help="show result or not?")
-ap.add_argument( "--data_dir", required=False, default="./FDDB/img", help="dir to img")
+ap.add_argument( "--data_dir", required=False, default="./FDDB/originalPics", help="dir to img")
 ap.add_argument( "--split_dir", required=False,default='./FDDB/FDDB-folds',help="dir to FDDB-folds")
 ap.add_argument( "--result", required=False,default='./result',help="dir to write result")
 args = ap.parse_args()

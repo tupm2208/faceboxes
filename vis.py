@@ -56,11 +56,14 @@ def image_demo(data_dir):
             color = (255, 0, 0)
             thickness = 2
             radius = 2
-            
+            print(bbox)
             cv2.rectangle(img_show, (int(bbox[0]), int(bbox[1])), (int(bbox[2]), int(bbox[3])), color, thickness)
 
             for point_x, point_y in zip(bbox[4::2], bbox[5::2]):
                 cv2.circle(img_show, (int(point_x), int(point_y)), radius, color, thickness)
+            start_point = (int(bbox[4]), int(bbox[5]))
+            end_point = (int(bbox[6]), int(bbox[7]))
+            cv2.line(img_show, start_point, end_point, color, thickness) 
             # cv2.putText(img_show, str(bbox[4]), (int(bbox[0]), int(bbox[1]) + 30),
             #             cv2.FONT_HERSHEY_SIMPLEX, 1,
             #             (255, 0, 255), 2)
@@ -72,7 +75,10 @@ def image_demo(data_dir):
 
         cv2.namedWindow('res',0)
         cv2.imshow('res',img_show)
-        cv2.waitKey(0)
+        key=cv2.waitKey(0)
+
+        if key==ord('q'):
+            break
     print(count)
 
 def video_demo(cam_id):

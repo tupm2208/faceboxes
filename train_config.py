@@ -18,7 +18,7 @@ config.TRAIN.log_interval = 50
 config.TRAIN.epoch = 300
 
 # config.TRAIN.lr_value_every_epoch = [0.00001,0.001,0.001,0.0001,0.00001,0.000001]          ####lr policy 
-config.TRAIN.lr_value_every_epoch = [0.0001, 0.0001, 0.0001, 0.0001, 0.00001, 0.000001]          ####lr policy
+config.TRAIN.lr_value_every_epoch = [0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001]          ####lr policy
 config.TRAIN.lr_decay_every_epoch = [1, 2, 120, 160, 200]
 config.TRAIN.weight_decay_factor = 5.e-4                                    ########### l2
 config.TRAIN.mix_precision=False                                            ##use mix precision to speedup
@@ -28,8 +28,8 @@ config.TRAIN.opt= 'Adam'
 
 config.MODEL = edict()
 config.MODEL.model_path = '/content/drive/My Drive/saved_model_v2/'                                    # save directory
-config.MODEL.pretrained_model= '/content/drive/My Drive/saved_model/epoch_41_train_lost_6.250940_val_loss5.001673/variables/variables'
-config.MODEL.model_path = 'saved_model/'     # save directory
+config.MODEL.pretrained_model= '/content/drive/My Drive/saved_model_v2/epoch_24_train_lost_5.805984_val_loss4.857975/variables/variables'
+# config.MODEL.model_path = 'saved_model/'     # save directory
 # config.MODEL.pretrained_model= None
 config.MODEL.hin = 512                         # input size during training , 512  different with the paper
 config.MODEL.win = 512
